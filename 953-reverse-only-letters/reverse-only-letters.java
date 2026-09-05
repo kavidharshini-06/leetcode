@@ -8,16 +8,17 @@ class Solution {
 
         while (left < right) {
 
-            if (!((arr[left] >= 'A' && arr[left] <= 'Z') ||
-                  (arr[left] >= 'a' && arr[left] <= 'z'))) {
+            
+            if (!Character.isLetter(arr[left])) {
                 left++;
             }
 
-            else if (!((arr[right] >= 'A' && arr[right] <= 'Z') ||
-                       (arr[right] >= 'a' && arr[right] <= 'z'))) {
+            
+            else if (!Character.isLetter(arr[right])) {
                 right--;
             }
 
+            
             else {
                 char temp = arr[left];
                 arr[left] = arr[right];
